@@ -121,14 +121,7 @@ def test_update_photo_of_pet(pet_photo='image/cat2.jpg'):
         assert status == 405
         print('Статус-код: 405')
 
-    def test_create_pet_simple(name="Семен", animal_type='кот', age='4'):
 
-        # Запрашиваем ключ api и сохраняем в переменую auth_key
-        _, auth_key = pf.get_api_key(valid_email, valid_password)
-        status, result = pf.post_create_pet_simple(auth_key, name, animal_type, age)
-
-        assert status == 200
-        assert result['name'] == name
 
 
 
